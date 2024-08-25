@@ -127,16 +127,16 @@ a:hover {
   width:fit-content;
   overflow: hidden;
 
-  background-color: #fff;
+  background-color: rgb(180, 0, 55);
   transition: all 0.3 ease-in-out;
 } 
 
 .menu-links a {
   display: block;
-  padding: 10px;
+  padding: 13px 25px;
   text-align: center;
   font-size: 1.5rem;
-  color: black;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   transition: all 0.3 ease-in-out;
 }
@@ -171,4 +171,33 @@ a:hover {
 
 .hamburger-icon span:first-child {
   transform: none;
+}
+
+/* INTRO */
+
+#intro {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.section-container {
+  gap: 4rem;
+
+}
+
+.section__pic-container {
+  height: 400px;
+  width: 400px;
+  margin: auto 0; 
+  /* auto 0 ase script o  */
+}
+
+.intro-pic {
+  height:55vh;
+  width: 55vh;
+}
+
+.intro-title {
+  margin-bottom: 10px;
 }
