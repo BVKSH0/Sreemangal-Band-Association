@@ -6,4 +6,67 @@
   #hamburger-nav {
     display: flex;
   }
+  .intro,.section-container {
+    display: block;
+  }
+  section,
+  .section-container {
+    height: fit-content;
+  }
+  section {
+    margin: 0 5%;
+  }
+  .section__pic-container {
+    margin: 0 auto 2rem;
+  }
+  .intro-containers {
+    margin-top: 0;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+
+ .intro-containers {
+   flex-wrap: wrap;
+   flex-direction: column;
+   text-align: center;
+  }
+  .section__pic-container {
+    justify-content: center;
+  }
+  .section__pic-container img {
+    height: 100%;
+    width: 100%;
+  }
+  .logo {
+    font-size: 1.5rem;
+
+  }
+  .title {
+    font-size: 2rem;
+  }
+}
+
+
+@media screen and (max-width: 420px) {
+
+  .section__pic-container {
+    height: 350px;
+    width: 350px;
+  }
+}
+@media screen and (max-width: 350px) {
+
+  .section__pic-container {
+    height: 300px;
+    width: 300px;
+  }
+}
+@media screen and (max-width: 300px) {
+
+  .section__pic-container {
+    height: 270px;
+    width: 270px;
+  }
 }
