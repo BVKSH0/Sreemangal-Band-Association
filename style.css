@@ -43,9 +43,14 @@ a,
 section {
   padding-top: 4vh;
   height: 96vh;
-  margin: 0 10rem;
+  margin: 0 7rem;
   box-sizing: border-box;
   min-height: fit-content;
+}
+
+.home {
+  margin: 0px 0px 0px 4rem;
+  padding: 0;
 }
 
 .section-container {
@@ -53,6 +58,11 @@ section {
 }
 
 /* DESKTOP-NAV */
+
+/* 
+backdrop-filter: blur(30px);
+box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+border: 2px solid rgba(255, 255, 255, 0.18); */
 
 nav,
 .nav-links {
@@ -62,9 +72,9 @@ nav,
 nav {
   justify-content: space-around;
   align-items: center;
-  height: 17vh;
+  height: 15vh;
 
-  background-color: #fff;
+  background-color: #f0eeee;
 }
 
 .nav-links {
@@ -177,15 +187,42 @@ a:hover {
 }
 
 /*HOME*/
-.homepage {
+
+.parent_img {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  /* margin: 5% auto;   */
+  /* background: #fff;
+  box-shadow: 0px 0px 5px #000; */
+
+  overflow: hidden;
+}
+.child_text {
   display: flex;
   flex-direction: row;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 3%;
+  width: 50%;
+  background: transparent;
+  /* box-shadow: 0px 0px 5px #000; */
 }
+
+/* .homepage {
+  display: flex;
+  flex-direction: row;
+} */
 
 .text-container {
   margin: 0;
   padding: 0;
 
+  display: flex;
+  justify-content: center;
+  text-align: left;
   flex-direction: column;
 }
 
@@ -197,7 +234,8 @@ a:hover {
 }
 
 #htitle {
-  font-size: 2rem;
+  font-size: 2.83rem;
+  font-weight: 500;
   color: rgb(180, 0, 55);
 }
 
@@ -252,8 +290,8 @@ a:hover {
 }
 
 .homeimg {
-  width: 80vh;
-  height: 50vh;
+  /* width: 80vh;
+  height: 55vh; */
 
   margin: 0;
   padding: 0;
@@ -262,26 +300,20 @@ a:hover {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 100%, 20% 50%);
 }
 
-/* INTRO */
-/* 
-#intro {
-  display: flex;
-  justify-content: center;
-  align-items: center; 
+.parent_img img {
+  height: 100%;
+  width: 65%;
+  object-fit: cover;
+
+  /* or
+  object-fit: cover; */
 }
 
-.section-container {
-  gap: 4rem;
-
+#right {
+  text-align: right;
 }
 
-.section__pic-container {
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
-}
-
-*/
+/*BOX*/
 
 #intro {
   position: relative;
