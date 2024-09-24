@@ -7,8 +7,7 @@
   display: block;
 }
 
-/* Media query: screens wider than 600px show only the mobile div */
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 45em) {
   #mobile-homepage {
     display: block;
   }
@@ -64,6 +63,48 @@
 
   #desktop-homepage {
     display: none;
+  }
+}
+
+/* RESPONSIVE CARDS  */
+
+#resCards {
+  display: none;
+}
+
+#desktop-cards {
+  display: block;
+}
+
+@media only screen and (max-width: 45em) {
+  #resCards {
+    display: block;
+  }
+  #desktop-cards {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 32em) {
+  .pre-title {
+    font-size: 1.3rem;
+  }
+  #htitle {
+    font-size: 2rem;
+  }
+  .hdes {
+    font-size: 0.6rem;
+  }
+
+  .rescard1title,
+  .rescard2title,
+  .rescard3title {
+    font-size: 1.5rem;
+  }
+  .resc1pt,
+  .resc2pt,
+  .resc3pt {
+    font-size: 2.5rem;
   }
 }
 

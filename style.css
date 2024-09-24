@@ -242,6 +242,9 @@ a:hover {
 .hdes {
   color: rgb(85, 85, 85);
 
+  width: 90%;
+  margin: 0 auto 0 0;
+
   font-size: small;
   font-style: italic;
 }
@@ -313,7 +316,7 @@ a:hover {
   text-align: right;
 }
 
-/*BOX*/
+/*CARDS*/
 
 .parentcard {
   position: relative;
@@ -380,12 +383,93 @@ a:hover {
 
 .card1title,
 .c1pt {
-  padding-right: 25vh;
+  padding-right: 20vh;
 }
 
 .card3title,
 .c3pt {
-  padding-left: 25vh;
+  padding-left: 10vh;
+}
+
+/* RESPONSIVE CARDS  */
+
+.parent1_resCard,
+.parent2_resCard,
+.parent3_resCard {
+  position: relative;
+  width: 100%;
+  height: 20vh;
+  margin: 5% auto;
+}
+
+.child1_resCard1,
+.child2_resCard1,
+.child3_resCard1 {
+  position: absolute;
+  top: -5%;
+  bottom: -5%;
+  right: 10%;
+  width: 10%;
+  /* box-shadow: -10px 0 15px rgba(0, 0, 0, 0.3), 10px 0 15px rgba(0, 0, 0, 0.3); */
+}
+.child1_resCard2,
+.child2_resCard2,
+.child3_resCard2 {
+  position: absolute;
+  top: -5%;
+  bottom: -5%;
+  left: 10%;
+  width: 10%;
+  /* box-shadow: -10px 0 15px rgba(0, 0, 0, 0.3), 10px 0 15px rgba(0, 0, 0, 0.3); */
+}
+
+.parent1_resCard {
+  box-shadow: 0px 0px 5px #000;
+  background-color: rgb(255, 255, 255);
+  color: rgb(180, 0, 55);
+}
+
+.child1_resCard1,
+.child1_resCard2 {
+  background: #fff;
+}
+
+.parent2_resCard {
+  box-shadow: 0px 0px 5px #000;
+  background-color: rgb(180, 0, 55);
+  color: #fff;
+}
+.child2_resCard1,
+.child2_resCard2 {
+  background: #fff;
+}
+
+.parent3_resCard {
+  box-shadow: 0px 0px 5px #000;
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+}
+.child3_resCard1,
+.child3_resCard2 {
+  background: #fff;
+}
+
+.rescard1title,
+.rescard2title,
+.rescard3title {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: auto;
+  padding-top: 2.5vh;
+}
+.resc1pt,
+.resc2pt,
+.resc3pt {
+  padding: 0;
+  margin: 0px;
+  font-size: 3rem;
+  text-align: center;
+  margin: auto;
 }
 
 /* INTRO */
