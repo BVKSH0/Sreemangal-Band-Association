@@ -133,7 +133,9 @@ a:hover {
 .menu-links {
   position: absolute;
 
-  top: 100%;
+  z-index: 200;
+
+  top: 130%;
   right: 0;
 
   max-height: 0;

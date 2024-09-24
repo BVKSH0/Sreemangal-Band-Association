@@ -1,12 +1,84 @@
+/* HOMEPAGE */
+#mobile-homepage {
+  display: none;
+}
+
+#desktop-homepage {
+  display: block;
+}
+
+/* Media query: screens wider than 600px show only the mobile div */
+@media only screen and (max-width: 40em) {
+  #mobile-homepage {
+    display: block;
+  }
+
+  .homepage {
+    width: 100%;
+  }
+
+  .parent_img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .child_text {
+    left: 0%;
+    width: 100%;
+    background: transparent;
+    /* box-shadow: 0px 0px 5px #000; */
+  }
+  .text-container {
+    text-align: center;
+  }
+
+  .pre-title {
+    font-size: 1.7rem;
+    font-weight: 500;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+
+    color: black;
+  }
+  #htitle {
+    font-size: 3rem;
+    font-weight: 500;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    color: rgb(255, 255, 255);
+  }
+
+  .hdes {
+    color: rgb(228, 228, 228);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+    -webkit-text-stroke: 0.1px black;
+
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .hevent:hover {
+    background-color: transparent;
+    color: rgb(180, 0, 55);
+    cursor: pointer;
+  }
+
+  #desktop-homepage {
+    display: none;
+  }
+}
 
 @media screen and (max-width: 1200px) {
+  /* nav  */
   #desktop-nav {
     display: none;
   }
   #hamburger-nav {
     display: flex;
   }
-  .intro,.section-container {
+
+  /* rest  */
+  .intro,
+  .section-container {
     display: block;
   }
   section,
@@ -24,13 +96,11 @@
   }
 }
 
-
 @media screen and (max-width: 600px) {
-
- .intro-containers {
-   flex-wrap: wrap;
-   flex-direction: column;
-   text-align: center;
+  .intro-containers {
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
   }
   .section__pic-container {
     justify-content: center;
@@ -41,30 +111,25 @@
   }
   .logo {
     font-size: 1.5rem;
-
   }
   .title {
     font-size: 2rem;
   }
 }
 
-
 @media screen and (max-width: 420px) {
-
   .section__pic-container {
     height: 350px;
     width: 350px;
   }
 }
 @media screen and (max-width: 350px) {
-
   .section__pic-container {
     height: 300px;
     width: 300px;
   }
 }
 @media screen and (max-width: 300px) {
-
   .section__pic-container {
     height: 270px;
     width: 270px;
