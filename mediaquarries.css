@@ -144,16 +144,10 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
-  #contact {
-    font-size: 1.5rem;
-  }
-}
+
 
 @media screen and (max-width: 1200px) {
-  #contact {
-    font-size: 1rem;
-  }
+
   /* nav  */
   #desktop-nav {
     display: none;

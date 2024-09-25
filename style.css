@@ -494,6 +494,7 @@ a:hover {
 .intro-details-container {
   flex-direction: column;
   padding-top: 2rem;
+  margin: auto 0;
 }
 
 .details-container {
@@ -562,9 +563,13 @@ a:hover {
   gap: 0.5rem;
   margin: 1rem;
 }
-
+/* 
 .contact-info-container p {
   font-size: larger;
+} */
+
+#contact {
+  font-size: clamp(15px, 2.5vw, 35px);
 }
 
 .icon {
