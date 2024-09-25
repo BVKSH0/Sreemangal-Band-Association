@@ -2,6 +2,8 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap");
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
@@ -49,7 +51,7 @@ section {
 }
 
 .home {
-  margin: 0px 0px 5vh 0px;
+  margin: 0 0 5vh 0;
   padding: 0;
 }
 
@@ -190,13 +192,13 @@ a:hover {
 
 /*HOME*/
 .homepage {
-  width: 101%;
+  width: 100%;
 }
 
 .parent_img {
   position: relative;
   width: 100%;
-  height: 70vh;
+  height: 78vh;
   /* margin: 5% auto;   */
   /* background: #fff;
   box-shadow: 0px 0px 5px #000; */
@@ -216,7 +218,7 @@ a:hover {
   /* box-shadow: 0px 0px 5px #000; */
 }
 
-.text-container {
+.htext-container {
   margin: 0;
   padding: 0;
 
@@ -250,12 +252,12 @@ a:hover {
 }
 
 .hbtn-container {
-  margin-top: 20px;
+  margin-top: 4vh;
 }
 
 .hcontact,
 .hevent {
-  padding: 9px 15px;
+  padding: 1.5vh 3.5vh;
 }
 
 .hcontact:hover {
@@ -278,7 +280,7 @@ a:hover {
 
   border: 2px solid rgb(180, 0, 55);
 
-  margin-right: 8px;
+  margin-right: 1vh;
 }
 
 .hevent {
@@ -355,7 +357,7 @@ a:hover {
   position: absolute;
   top: 0%;
   bottom: 0%;
-  right: 0%;
+  right: 0px;
   width: 40%;
   background: #000000;
   color: white;
@@ -375,7 +377,7 @@ a:hover {
 .c2pt,
 .c3pt {
   padding: 0;
-  margin: 0px;
+  margin: 0;
   font-size: 3rem;
   text-align: center;
   margin: auto;
@@ -466,7 +468,7 @@ a:hover {
 .resc2pt,
 .resc3pt {
   padding: 0;
-  margin: 0px;
+  margin: 0;
   font-size: 3rem;
   text-align: center;
   margin: auto;
@@ -478,20 +480,20 @@ a:hover {
   position: relative;
 }
 
+.intro-containers,
+.intro-details-container {
+  display: flex;
+}
+
 .intro-containers {
   gap: 2rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
-.intro-details-containers {
-  justify-content: center;
+.intro-details-container {
   flex-direction: column;
-}
-
-.intro-containers,
-.intro-details-containers {
-  display: flex;
+  padding-top: 2rem;
 }
 
 .intro-pic {
@@ -515,20 +517,20 @@ a:hover {
   gap: 4rem;
   height: 80%;
 }
-
+/* 
 .section__pic-container {
   height: 60vh;
   width: 60vh;
+} */
+.section__pic-container {
+  display: flex;
+  justify-content: center;
 }
 
 .intro-pic {
   height: 55vh;
   width: 55vh;
   margin: auto 0;
-}
-
-.intro-title {
-  margin-bottom: 10px;
 }
 
 .intro-container {
