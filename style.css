@@ -602,7 +602,7 @@ a:hover {
 
 /* BANDS */
 
-.container-bands {
+/* .container-bands {
   display: grid;
   height: 80vh;
   grid-template-columns: 1fr 1fr 1fr;
@@ -612,7 +612,7 @@ a:hover {
   margin-right: 5vh;
   grid-template-rows: 0.3fr 1fr 1fr;
   grid-template-areas: "main main main";
-}
+} */
 
 .intro-title-bands {
   text-align: center;
@@ -625,4 +625,134 @@ a:hover {
 
 main {
   grid-area: main;
+}
+.bands {
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.bands-category {
+  padding: 0 10vw;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  text-transform: capitalize;
+}
+
+.bands-container {
+  padding: 0 10vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.bands-container::-webkit-scrollbar {
+  display: none;
+}
+
+.bands-card {
+  flex: 0 0 auto;
+  width: 250px;
+  height: 450px;
+  margin-right: 40px;
+}
+
+.bands-image {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+.bands-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  width: 90%;
+  text-transform: capitalize;
+  border: none;
+  outline: none;
+  background: #fff;
+  border-radius: 5px;
+  transition: 0.5s;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.bands-card:hover .card-btn {
+  opacity: 1;
+}
+
+.card-btn:hover {
+  background: #ff7d7d;
+  color: #fff;
+}
+
+.bands-info {
+  width: 100%;
+  height: 100px;
+  padding-top: 10px;
+}
+
+.bands-name {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+}
+
+.bands-short-description {
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+  opacity: 0.5;
+  text-transform: capitalize;
+  margin: 5px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.pre-btn,
+.nxt-btn {
+  border: none;
+  width: 10vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+  cursor: pointer;
+  z-index: 8;
+}
+
+.pre-btn {
+  left: 0;
+  transform: rotate(180deg);
+}
+
+.nxt-btn {
+  right: 0;
+}
+
+.pre-btn img,
+.nxt-btn img {
+  opacity: 0.4;
+}
+
+.pre-btn:hover img,
+.nxt-btn:hover img {
+  opacity: 1;
 }
