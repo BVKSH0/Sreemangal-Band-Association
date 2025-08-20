@@ -5,20 +5,38 @@ function toggleMenu() {
   icon.classList.toggle("open");
 }
 
-// slider
-const productContainers = [...document.querySelectorAll(".bands-container")];
-const nxtBtn = [...document.querySelectorAll(".nxt-btn")];
-const preBtn = [...document.querySelectorAll(".pre-btn")];
+ let lastScroll = 0;
+  const nav = document.getElementById('desktop-nav');
 
-productContainers.forEach((item, i) => {
-  let containerDimensions = item.getBoundingClientRect();
-  let containerWidth = containerDimensions.width;
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
 
-  nxtBtn[i].addEventListener("click", () => {
-    item.scrollLeft += containerWidth;
+    if (currentScroll <= 0) {
+      nav.style.top = '0';
+      return;
+    }
+
+    if (currentScroll > lastScroll) {
+      // Scrolling down - hide navbar
+      nav.style.top = '-15vh';  // hides navbar by moving it up
+    } else {
+      // Scrolling up - show navbar
+      nav.style.top = '0';
+    }
+
+    lastScroll = currentScroll;
   });
 
-  preBtn[i].addEventListener("click", () => {
-    item.scrollLeft -= containerWidth;
+// SLIDER
+  const carousel = document.querySelector('.bands-carousel');
+  const nextBtn = document.querySelector('.next-btn');
+  const prevBtn = document.querySelector('.prev-btn');
+
+  nextBtn.addEventListener('click', () => {
+    carousel.scrollBy({ left: 300, behavior: 'smooth' });
   });
-});
+
+  prevBtn.addEventListener('click', () => {
+    carousel.scrollBy({ left: -300, behavior: 'smooth' });
+  });
+
