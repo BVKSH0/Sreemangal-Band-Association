@@ -873,6 +873,7 @@ font-weight:500;
   background-color: ☐ #070d1b;
 }
 #copy a {
+  font-size: 11px;
   color: #333333;
   text-decoration: none;
   cursor: default;
