@@ -215,3 +215,35 @@
     width: 270px;
   }
 } */
+
+/* ADD THIS TO THE VERY END OF mediaquarries.css */
+
+/* Force proper bands section behavior on all screen sizes */
+@media only screen and (max-width: 45em) {
+  .bands {
+    overflow: hidden !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  
+  .bands-carousel-wrapper {
+    overflow: hidden !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .bands-carousel {
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
+
+@media only screen and (max-width: 32em) {
+  .bands {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}

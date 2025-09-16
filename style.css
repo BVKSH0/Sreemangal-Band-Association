@@ -546,13 +546,15 @@ a:hover {
   flex-wrap: wrap;
 }
 
-
-/* BANDS */
+/* COMPLETE BANDS SECTION FIX - Replace your bands section with this */
 
 .bands {
   padding: 60px 40px;
   height: auto;
   text-align: center;
+  width: 100%;
+  overflow: hidden; /* Critical: hide all overflow */
+  box-sizing: border-box;
 }
 
 .title {
@@ -561,37 +563,54 @@ a:hover {
   margin-bottom: 40px;
 }
 
-/* === Carousel Layout === */
+/* === Carousel Wrapper === */
 .bands-carousel-wrapper {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden; /* Hide wrapper overflow */
+  box-sizing: border-box;
 }
 
+/* === Carousel Container === */
 .bands-carousel {
   display: flex;
   overflow-x: auto;
+  overflow-y: hidden;
   gap: 20px;
   scroll-behavior: smooth;
-  padding: 20px 10px;
+  padding: 20px 0; /* Remove horizontal padding */
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  
+  /* Hide scrollbars completely */
   scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .bands-carousel::-webkit-scrollbar {
   display: none;
+  width: 0;
+  height: 0;
 }
 
-/* === Card === */
+/* === Cards === */
 .bands-card {
   flex: 0 0 auto;
   background-color: #fff;
   border-radius: 12px;
   width: 200px;
+  min-width: 200px;
+  max-width: 200px; /* Prevent cards from growing */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   transition: transform 0.2s ease;
   overflow: hidden;
   text-align: left;
+  box-sizing: border-box;
 }
 
 .bands-card:hover {
@@ -602,16 +621,19 @@ a:hover {
   width: 100%;
   height: 180px;
   object-fit: cover;
+  display: block;
 }
 
 .bands-info {
   padding: 15px;
+  box-sizing: border-box;
 }
 
 .bands-name {
   font-size: 1.1rem;
   font-weight: 600;
   margin: 0 0 8px 0;
+  color: #333;
 }
 
 .bands-short-description {
@@ -620,7 +642,7 @@ a:hover {
   margin: 0;
 }
 
-/* === Arrows === */
+/* === Navigation Buttons === */
 .carousel-btn {
   background-color: #ffffff;
   border: none;
@@ -631,6 +653,7 @@ a:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   transition: background 0.3s ease;
+  flex-shrink: 0;
 }
 
 .carousel-btn:hover {
@@ -645,21 +668,179 @@ a:hover {
   margin-left: 10px;
 }
 
-/* === Responsive === */
-@media (max-width: 768px) {
-  .bands-carousel-wrapper {
-    flex-direction: column;
-  }
+/* === RESPONSIVE DESIGN === */
 
-  .carousel-btn {
-    display: none;
+/* Large screens */
+@media screen and (max-width: 1200px) {
+  .bands {
+    padding: 50px 20px; /* Reduce horizontal padding */
   }
-
+  
   .bands-card {
-    width: 70%;
+    width: 180px;
+    min-width: 180px;
+    max-width: 180px;
   }
 }
 
+/* Tablets */
+@media screen and (max-width: 900px) {
+  .bands {
+    padding: 40px 15px;
+  }
+  
+  .title {
+    font-size: 2.2rem;
+  }
+  
+  .bands-card {
+    width: 160px;
+    min-width: 160px;
+    max-width: 160px;
+  }
+  
+  .bands-thumb {
+    height: 140px;
+  }
+}
+
+/* Mobile landscape */
+@media screen and (max-width: 768px) {
+  .bands {
+    padding: 30px 10px; /* Further reduce padding */
+    margin: 0; /* Remove any margin */
+  }
+  
+  .title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .bands-carousel-wrapper {
+    margin: 0 -5px; /* Negative margin to expand carousel area */
+    padding: 0 5px;
+    box-sizing: border-box;
+  }
+  
+  .bands-carousel {
+    padding: 15px 0;
+    gap: 15px;
+    padding-left: 10px; /* Small left padding for first card */
+    padding-right: 20px; /* Extra right padding for last card */
+  }
+  
+  .bands-card {
+    width: 150px;
+    min-width: 150px;
+    max-width: 150px;
+  }
+  
+  .bands-thumb {
+    height: 130px;
+  }
+  
+  .carousel-btn {
+    font-size: 1.5rem;
+    padding: 6px 10px;
+  }
+}
+
+/* Mobile portrait */
+@media screen and (max-width: 600px) {
+  .bands {
+    padding: 25px 5px; /* Minimal padding */
+    margin: 0;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    padding: 0 10px; /* Add padding only to title */
+  }
+  
+  .bands-carousel-wrapper {
+    flex-direction: column;
+    gap: 15px;
+    margin: 0 -10px; /* Expand full width */
+    padding: 0;
+  }
+  
+  .bands-carousel {
+    width: 100vw; /* Use full viewport width */
+    max-width: 100vw;
+    margin-left: calc(-50vw + 50%); /* Center the carousel */
+    padding: 10px 15px; /* Padding for first and last cards */
+    gap: 12px;
+  }
+  
+  .bands-card {
+    width: 140px;
+    min-width: 140px;
+    max-width: 140px;
+  }
+  
+  .bands-thumb {
+    height: 120px;
+  }
+  
+  .carousel-btn {
+    position: static;
+    margin: 0 5px;
+  }
+}
+
+/* Small mobile */
+@media screen and (max-width: 480px) {
+  .bands {
+    padding: 20px 0; /* Remove all horizontal padding */
+  }
+  
+  .title {
+    font-size: 1.6rem;
+    padding: 0 15px;
+  }
+  
+  .bands-carousel {
+    padding: 8px 10px;
+    gap: 10px;
+  }
+  
+  .bands-card {
+    width: 130px;
+    min-width: 130px;
+    max-width: 130px;
+  }
+  
+  .bands-thumb {
+    height: 110px;
+  }
+}
+
+/* Very small mobile */
+@media screen and (max-width: 350px) {
+  .bands {
+    padding: 15px 0;
+  }
+  
+  .title {
+    font-size: 1.4rem;
+    padding: 0 10px;
+  }
+  
+  .bands-carousel {
+    padding: 5px 8px;
+  }
+  
+  .bands-card {
+    width: 120px;
+    min-width: 120px;
+    max-width: 120px;
+  }
+  
+  .bands-thumb {
+    height: 100px;
+  }
+}
 
 /* === Committee Section === */
 #committee {
@@ -882,3 +1063,4 @@ font-weight:500;
   text-decoration: underline;
   cursor: pointer;
 }
+
