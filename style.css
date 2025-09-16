@@ -555,6 +555,7 @@ a:hover {
   width: 100%;
   overflow: hidden; /* Critical: hide all overflow */
   box-sizing: border-box;
+  margin: 0;
 }
 
 .title {
